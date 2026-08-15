@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "types": ["bun"],
+    "paths": {
+      "@frontend/*": ["./src/*"],
+      "@server/*": ["./server/*"]
+    }
+  },
+  "include": ["src", "server"]
+}

@@ -1,0 +1,3 @@
+[serve.static]
+plugins = ["bun-tailwindcss-plugin"]
+env = "PUBLIC_*"
