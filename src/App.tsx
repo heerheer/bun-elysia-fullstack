@@ -22,6 +22,18 @@ export default function App() {
 
   return (
     <main className="mx-auto flex min-h-screen max-w-xl flex-col items-center justify-center gap-6 p-6 text-center">
+      <div className="flex items-center justify-center gap-4">
+        <img
+          src="/bun.svg"
+          alt="Bun logo"
+          className="h-20 w-20 p-2 shadow-lg"
+        />
+        <img
+          src="/elysia.svg"
+          alt="Elysia logo"
+          className="h-20 w-20 p-2 shadow-lg"
+        />
+      </div>
       <h1 className="text-2xl font-semibold">Bun + Elysia Fullstack Starter</h1>
       <p className="text-slate-300">Click the button to call the type-safe Elysia hello API.</p>
       <Button
