@@ -1,10 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
+import { useNavigate } from 'react-router-dom';
 
 import { Button } from '@frontend/components/ui/button';
 import { api } from '@frontend/lib/eden';
 import { useExampleStore } from '@frontend/store/example-store';
 
 export default function App() {
+  const navigate = useNavigate();
   const increment = useExampleStore((state) => state.increment);
   const clicks = useExampleStore((state) => state.clicks);
 
@@ -44,6 +46,15 @@ export default function App() {
       >
         Request backend ({clicks})
       </Button>
+
+      <div className="flex flex-wrap items-center justify-center gap-3">
+        <Button variant="outline" onClick={() => navigate('/about')}>
+          Go to About
+        </Button>
+        <Button variant="outline" onClick={() => navigate('/login')}>
+          Go to Login
+        </Button>
+      </div>
 
       {helloQuery.isFetching && <p>Loading…</p>}
       {helloQuery.error && (
