@@ -8,8 +8,11 @@
     "jsx": "react-jsx",
     "types": ["bun"],
     "paths": {
+      "@/*": ["./*"],
       "@frontend/*": ["./src/*"],
-      "@server/*": ["./server/*"]
+      "@ui/*": ["./src/*"],
+      "@server/*": ["./server/*"],
+      "@s/*": ["./server/*"]
     }
   },
   "include": ["src", "server"]

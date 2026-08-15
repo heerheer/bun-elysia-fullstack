@@ -2,6 +2,8 @@ import { app } from "@server/app";
 import { staticPlugin } from "@elysia/static";
 import { Elysia } from "elysia";
 
+import indexHtml from "@/index.html";
+
 const port = Number(process.env.PORT ?? 3000);
 
 new Elysia()
@@ -10,8 +12,10 @@ new Elysia()
     await staticPlugin({
       assets: "public",
       prefix: "/",
+      alwaysStatic: true,
     }),
   )
+  .get("/*", indexHtml)
   .listen({
     hostname: "0.0.0.0",
     port,
