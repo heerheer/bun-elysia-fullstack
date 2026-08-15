@@ -1,0 +1,41 @@
+{
+  "name": "bun-elysia-fullstack",
+  "version": "1.0.0",
+  "description": "Just a personal-use template for building full-stack applications with Bun Fullstack and Elysia.",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "dev:server": "bun run server/index.ts",
+    "dev:frontend": "bun --hot index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://localhost:26831/heerheer/bun-elysia-fullstack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@elysia/cors": "^1.4.2",
+    "@elysia/eden": "^1.4.10",
+    "@elysia/openapi": "^1.4.15",
+    "@elysia/static": "^1.4.11",
+    "@tanstack/react-query": "^5.101.4",
+    "bun-tailwindcss-plugin": "npm:bun-plugin-tailwind@^0.1.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "elysia": "^1.4.29",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.2",
+    "tailwind-merge": "^3.6.0",
+    "tailwindcss": "^4.2.0",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "typescript": "^7.0.2"
+  },
+  "type": "module"
+}
