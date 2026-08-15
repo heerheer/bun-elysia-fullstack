@@ -1,10 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
+import { useNavigate } from 'react-router-dom';
 
 import { Button } from '@frontend/components/ui/button';
 import { api } from '@frontend/lib/eden';
 import { useExampleStore } from '@frontend/store/example-store';
 
 export default function App() {
+  const navigate = useNavigate();
   const increment = useExampleStore((state) => state.increment);
   const clicks = useExampleStore((state) => state.clicks);
 
@@ -22,6 +24,18 @@ export default function App() {
 
   return (
     <main className="mx-auto flex min-h-screen max-w-xl flex-col items-center justify-center gap-6 p-6 text-center">
+      <div className="flex items-center justify-center gap-4">
+        <img
+          src="/bun.svg"
+          alt="Bun logo"
+          className="h-20 w-20 p-2 shadow-lg"
+        />
+        <img
+          src="/elysia.svg"
+          alt="Elysia logo"
+          className="h-20 w-20 p-2 shadow-lg"
+        />
+      </div>
       <h1 className="text-2xl font-semibold">Bun + Elysia Fullstack Starter</h1>
       <p className="text-slate-300">Click the button to call the type-safe Elysia hello API.</p>
       <Button
@@ -32,6 +46,15 @@ export default function App() {
       >
         Request backend ({clicks})
       </Button>
+
+      <div className="flex flex-wrap items-center justify-center gap-3">
+        <Button variant="outline" onClick={() => navigate('/about')}>
+          Go to About
+        </Button>
+        <Button variant="outline" onClick={() => navigate('/login')}>
+          Go to Login
+        </Button>
+      </div>
 
       {helloQuery.isFetching && <p>Loading…</p>}
       {helloQuery.error && (

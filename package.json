@@ -4,7 +4,8 @@
   "description": "Just a personal-use template for building full-stack applications with Bun Fullstack and Elysia.",
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "dev:server": "bun run server/index.ts",
+    "dev": "bun run dev:server",
+    "dev:server": "bun run server/index.ts --watch",
     "dev:frontend": "bun --hot index.html"
   },
   "repository": {
