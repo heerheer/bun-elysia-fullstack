@@ -6,7 +6,8 @@
     "typecheck": "tsc --noEmit",
     "dev": "bun run dev:server",
     "dev:server": "bun run server/index.ts --watch",
-    "dev:frontend": "bun --hot index.html"
+    "dev:frontend": "bun --hot index.html",
+    "build": "bun run build.ts"
   },
   "repository": {
     "type": "git",
