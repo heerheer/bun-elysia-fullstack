@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import App from '@frontend/App';
 import AboutPage from '@frontend/pages/about';
 import LoginPage from '@frontend/pages/login';
+import NotFoundPage from './pages/not-found';
 import './styles.css';
 
 const queryClient = new QueryClient();
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Route path="/" element={<App />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
