@@ -6,6 +6,7 @@ import indexHtml from "@/index.html";
 
 const port = Number(process.env.PORT ?? 3000);
 
+// 用于启动静态资源static + API server + 前端页面的Elysia入口
 new Elysia()
   .use(app)
   .use(
